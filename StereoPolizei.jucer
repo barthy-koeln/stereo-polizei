@@ -3,7 +3,10 @@
 <JUCERPROJECT id="pIK1bK" name="StereoPolizei" projectType="audioplug" useAppConfig="0"
               addUsingNamespaceToJuceHeader="0" displaySplashScreen="1" jucerFormatVersion="1"
               pluginVST3Category="Analyzer,Fx,Spatial,Stereo" cppLanguageStandard="latest"
-              headerPath="/home/barthy/Documents/lib/alglib">
+              version="1.0.0" companyName="barthy.koeln" companyCopyright="Barthelemy Bonhomme"
+              companyWebsite="https://barthy.koeln" companyEmail="post@barthy.koeln"
+              pluginFormats="buildStandalone,buildVST3" pluginManufacturerCode="BBKN"
+              pluginCode="STPO">
   <MAINGROUP id="hJGQ4O" name="StereoPolizei">
     <GROUP id="{059EC222-0C6D-C8C3-D7DC-CADFA0E2B99B}" name="Source">
       <FILE id="ddpeay" name="CorrelationMeter.h" compile="0" resource="0"
@@ -20,9 +23,11 @@
     <FILE id="DJICYv" name="bad.png" compile="0" resource="1" file="assets/bad.png"/>
     <FILE id="LKIvHi" name="good.png" compile="0" resource="1" file="assets/good.png"/>
   </MAINGROUP>
-  <JUCEOPTIONS JUCE_STRICT_REFCOUNTEDPOINTER="1" JUCE_VST3_CAN_REPLACE_VST2="0"/>
+  <JUCEOPTIONS JUCE_STRICT_REFCOUNTEDPOINTER="1" JUCE_VST3_CAN_REPLACE_VST2="0"
+               JUCE_USE_FLAC="0" JUCE_USE_OGGVORBIS="0" JUCE_USE_MP3AUDIOFORMAT="0"
+               JUCE_USE_LAME_AUDIO_FORMAT="0" JUCE_USE_WINDOWS_MEDIA_FORMAT="0"/>
   <EXPORTFORMATS>
-    <CLION targetFolder="Builds/CLion" clionMakefileEnabled="1">
+    <CLION targetFolder="Builds/CLion" clionMakefileEnabled="1" clionXcodeEnabled="1">
       <MODULEPATHS>
         <MODULEPATH id="juce_gui_extra" path="../../juce"/>
         <MODULEPATH id="juce_gui_basics" path="../../juce"/>
@@ -34,9 +39,9 @@
         <MODULEPATH id="juce_audio_utils" path="../../juce"/>
         <MODULEPATH id="juce_audio_processors" path="../../juce"/>
         <MODULEPATH id="juce_audio_plugin_client" path="../../juce"/>
-        <MODULEPATH id="juce_audio_formats" path="../../juce"/>
         <MODULEPATH id="juce_audio_devices" path="../../juce"/>
         <MODULEPATH id="juce_audio_basics" path="../../juce"/>
+        <MODULEPATH id="juce_audio_formats" path="../../JUCE/modules"/>
       </MODULEPATHS>
     </CLION>
     <CODEBLOCKS_LINUX targetFolder="Builds/CodeBlocksLinux">
@@ -55,9 +60,9 @@
         <MODULEPATH id="juce_audio_utils" path="../../juce"/>
         <MODULEPATH id="juce_audio_processors" path="../../juce"/>
         <MODULEPATH id="juce_audio_plugin_client" path="../../juce"/>
-        <MODULEPATH id="juce_audio_formats" path="../../juce"/>
         <MODULEPATH id="juce_audio_devices" path="../../juce"/>
         <MODULEPATH id="juce_audio_basics" path="../../juce"/>
+        <MODULEPATH id="juce_audio_formats" path="../../JUCE/modules"/>
       </MODULEPATHS>
     </CODEBLOCKS_LINUX>
     <LINUX_MAKE targetFolder="Builds/LinuxMakefile">
@@ -76,9 +81,9 @@
         <MODULEPATH id="juce_audio_utils" path="../../juce"/>
         <MODULEPATH id="juce_audio_processors" path="../../juce"/>
         <MODULEPATH id="juce_audio_plugin_client" path="../../juce"/>
-        <MODULEPATH id="juce_audio_formats" path="../../juce"/>
         <MODULEPATH id="juce_audio_devices" path="../../juce"/>
         <MODULEPATH id="juce_audio_basics" path="../../juce"/>
+        <MODULEPATH id="juce_audio_formats" path="../../JUCE/modules"/>
       </MODULEPATHS>
     </LINUX_MAKE>
     <XCODE_MAC targetFolder="Builds/MacOSX">
@@ -97,9 +102,9 @@
         <MODULEPATH id="juce_audio_utils"/>
         <MODULEPATH id="juce_audio_processors"/>
         <MODULEPATH id="juce_audio_plugin_client"/>
-        <MODULEPATH id="juce_audio_formats"/>
         <MODULEPATH id="juce_audio_devices"/>
         <MODULEPATH id="juce_audio_basics"/>
+        <MODULEPATH id="juce_audio_formats" path="../../JUCE/modules"/>
       </MODULEPATHS>
     </XCODE_MAC>
   </EXPORTFORMATS>
